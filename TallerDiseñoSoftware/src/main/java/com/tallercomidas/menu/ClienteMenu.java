@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 /**
  * Menú de consola para la gestión de Clientes.
- * Captura la entrada del usuario y delega la lógica al ClienteService.
  */
 public class ClienteMenu {
 
@@ -62,7 +61,7 @@ public class ClienteMenu {
         }
     }
 
-    // ── Operaciones ────────────────────────────────────────────────────────────
+    // Operaciones
 
     private void agregarCliente() throws SQLException {
         System.out.println("── Agregar nuevo cliente ──────────────");

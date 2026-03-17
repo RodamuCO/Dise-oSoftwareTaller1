@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class ProductoDAO implements CrudDAO<Producto, Integer> {
 
-    // ── CREATE ─────────────────────────────────────────────────────────────────
+    // CREATE
 
     @Override
     public boolean insertar(Producto producto) throws SQLException {
@@ -31,7 +31,7 @@ public class ProductoDAO implements CrudDAO<Producto, Integer> {
         }
     }
 
-    // ── UPDATE ─────────────────────────────────────────────────────────────────
+    // UPDATE
 
     @Override
     public boolean actualizar(Producto producto) throws SQLException {
@@ -49,7 +49,7 @@ public class ProductoDAO implements CrudDAO<Producto, Integer> {
         }
     }
 
-    // ── DELETE ─────────────────────────────────────────────────────────────────
+    // DELETE
 
     @Override
     public boolean eliminar(Integer id) throws SQLException {
@@ -62,7 +62,7 @@ public class ProductoDAO implements CrudDAO<Producto, Integer> {
         }
     }
 
-    // ── READ ───────────────────────────────────────────────────────────────────
+    // READ
 
     @Override
     public Producto buscarPorId(Integer id) throws SQLException {
@@ -127,7 +127,7 @@ public class ProductoDAO implements CrudDAO<Producto, Integer> {
         return productos;
     }
 
-    // ── Helper ─────────────────────────────────────────────────────────────────
+    // Helper
 
     private Producto mapearProducto(ResultSet rs) throws SQLException {
         return new Producto(

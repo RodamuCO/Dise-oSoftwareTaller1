@@ -2,7 +2,6 @@ package com.tallercomidas.model;
 
 /**
  * Clase modelo que representa un Cliente de la empresa de comidas rápidas.
- * Aplica encapsulamiento mediante atributos privados y métodos getter/setter.
  */
 public class Cliente {
 
@@ -11,8 +10,6 @@ public class Cliente {
     private String email;
     private String telefono;
     private String direccion;
-
-    // ── Constructores ──────────────────────────────────────────────────────────
 
     /** Constructor para crear un cliente nuevo (sin ID, lo asigna la BD). */
     public Cliente(String nombre, String email, String telefono, String direccion) {
@@ -31,7 +28,7 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    // ── Getters y Setters ──────────────────────────────────────────────────────
+    // Getters y Setters
 
     public int getId()                  { return id; }
     public void setId(int id)           { this.id = id; }
@@ -48,8 +45,7 @@ public class Cliente {
     public String getDireccion()        { return direccion; }
     public void setDireccion(String d)  { this.direccion = d; }
 
-    // ── toString ───────────────────────────────────────────────────────────────
-
+    // toString
     @Override
     public String toString() {
         return String.format(

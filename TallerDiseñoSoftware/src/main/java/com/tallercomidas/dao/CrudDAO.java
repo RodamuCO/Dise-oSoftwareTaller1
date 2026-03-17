@@ -5,10 +5,6 @@ import java.util.List;
 
 /**
  * Interfaz genérica que define las operaciones CRUD estándar.
- * Todas las clases DAO deben implementar este contrato.
- *
- * @param <T>  Tipo de entidad a gestionar.
- * @param <ID> Tipo del identificador de la entidad.
  */
 public interface CrudDAO<T, ID> {
 

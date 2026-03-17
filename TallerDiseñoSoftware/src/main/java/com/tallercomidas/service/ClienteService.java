@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
- * Capa de servicio para la entidad Cliente.
  * Contiene la lógica de negocio y validaciones antes de delegar al DAO.
  */
 public class ClienteService {
@@ -28,8 +27,7 @@ public class ClienteService {
         return clienteDAO.insertar(cliente);
     }
 
-    // ── UPDATE ─────────────────────────────────────────────────────────────────
-
+    // UPDATE
     public boolean actualizarCliente(int id, String nombre, String email,
                                      String telefono, String direccion) throws SQLException {
         validarCamposCliente(nombre, email, telefono, direccion);
@@ -44,7 +42,7 @@ public class ClienteService {
         return clienteDAO.actualizar(existente);
     }
 
-    // ── DELETE ─────────────────────────────────────────────────────────────────
+    // DELETE
 
     public boolean eliminarCliente(int id) throws SQLException {
         Cliente existente = clienteDAO.buscarPorId(id);
@@ -54,7 +52,7 @@ public class ClienteService {
         return clienteDAO.eliminar(id);
     }
 
-    // ── READ ───────────────────────────────────────────────────────────────────
+    // READ
 
     public Cliente buscarClientePorId(int id) throws SQLException {
         return clienteDAO.buscarPorId(id);
@@ -71,7 +69,7 @@ public class ClienteService {
         return clienteDAO.buscarPorNombre(nombre.trim());
     }
 
-    // ── Validaciones ───────────────────────────────────────────────────────────
+    // Validaciones
 
     private void validarCamposCliente(String nombre, String email,
                                       String telefono, String direccion) {

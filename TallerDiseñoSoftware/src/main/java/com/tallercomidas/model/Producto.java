@@ -2,7 +2,6 @@ package com.tallercomidas.model;
 
 /**
  * Clase modelo que representa un Producto del menú de la empresa de comidas rápidas.
- * Las categorías disponibles son: HAMBURGUESA, PIZZA, HOT_DOG, SALCHIPAPA.
  */
 public class Producto {
 
@@ -31,7 +30,7 @@ public class Producto {
     private Categoria categoria;
     private boolean   disponible;
 
-    // ── Constructores ──────────────────────────────────────────────────────────
+    // Constructores
 
     /** Constructor para crear un producto nuevo (sin ID). */
     public Producto(String nombre, String descripcion, double precio, Categoria categoria) {
@@ -53,8 +52,7 @@ public class Producto {
         this.disponible  = disponible;
     }
 
-    // ── Getters y Setters ──────────────────────────────────────────────────────
-
+    // Getters y Setters
     public int getId()                       { return id; }
     public void setId(int id)                { this.id = id; }
 
@@ -73,7 +71,7 @@ public class Producto {
     public boolean isDisponible()            { return disponible; }
     public void setDisponible(boolean disp)  { this.disponible = disp; }
 
-    // ── toString ───────────────────────────────────────────────────────────────
+    // toString
 
     @Override
     public String toString() {

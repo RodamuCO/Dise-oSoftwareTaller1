@@ -9,7 +9,7 @@ import java.util.List;
 
 public class ClienteDAO implements CrudDAO<Cliente, Integer> {
 
-    // ── CREATE ─────────────────────────────────────────────────────────────────
+    // CREATE
 
     @Override
     public boolean insertar(Cliente cliente) throws SQLException {
@@ -25,8 +25,7 @@ public class ClienteDAO implements CrudDAO<Cliente, Integer> {
         }
     }
 
-    // ── UPDATE ─────────────────────────────────────────────────────────────────
-
+    // UPDATE
     @Override
     public boolean actualizar(Cliente cliente) throws SQLException {
         String sql = "UPDATE clientes SET nombre=?, email=?, telefono=?, direccion=? WHERE id=?";
@@ -42,7 +41,7 @@ public class ClienteDAO implements CrudDAO<Cliente, Integer> {
         }
     }
 
-    // ── DELETE ─────────────────────────────────────────────────────────────────
+    // DELETE
 
     @Override
     public boolean eliminar(Integer id) throws SQLException {
@@ -55,7 +54,7 @@ public class ClienteDAO implements CrudDAO<Cliente, Integer> {
         }
     }
 
-    // ── READ ───────────────────────────────────────────────────────────────────
+    // READ
 
     @Override
     public Cliente buscarPorId(Integer id) throws SQLException {
@@ -104,8 +103,7 @@ public class ClienteDAO implements CrudDAO<Cliente, Integer> {
         return clientes;
     }
 
-    // ── Helper ─────────────────────────────────────────────────────────────────
-
+    // Helper
     private Cliente mapearCliente(ResultSet rs) throws SQLException {
         return new Cliente(
             rs.getInt("id"),
